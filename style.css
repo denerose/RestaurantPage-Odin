@@ -1,0 +1,45 @@
+:root {
+    --platinum: 216, 217, 216;
+    --green: 149, 179, 54;
+    --dark-green: 40, 65, 0;
+    --orange: 236, 107, 10;
+    --red: 163, 27, 2;
+    --cream: 253, 218, 156;
+    --charcoal: 20, 21, 20;
+}
+
+body {
+    background-color: rgb(var(--orange));
+    background-image: url("sheri-silver-A4EtgLN1_Fw-unsplash.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    border: 0;
+}
+
+header {
+    background-color: rgba(var(--charcoal), 0.7);
+    height: 10vh;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+footer {
+    background-color: rgba(var(--charcoal), 0.7);
+    height: 10%;
+}
+
+.navTab {
+    color: rgb(var(--platinum));
+    border: 0.1px solid rgba(var(--orange), 0.5);
+    background-color: rgba(var(--orange), 0.2);
+    padding: 1em;
+}

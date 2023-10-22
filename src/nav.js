@@ -1,5 +1,9 @@
+import { displayMenu } from "./menu"
+
 const header = document.getElementById("header")
-const navOptions = ['Home', 'Menu', 'About']
+const app = document.getElementById("content")
+
+const navOptions = ['Home', 'Menu', 'Contact']
 
 const loadNavigation = () => {
     header.innerHTML = ''
@@ -7,9 +11,11 @@ const loadNavigation = () => {
         const newTab = document.createElement('div')
         newTab.innerText = String(item)
         newTab.id = String(item)
-        newTab.classList.add("navTab")
+        newTab.className = "navTab"
         header.appendChild(newTab)
     })
+    const menuBtn = document.getElementById("Menu")
+    menuBtn.addEventListener('click', () => {displayMenu(app)})
 }
 
 export {loadNavigation}

@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   displayContact: () => (/* binding */ displayContact)\n/* harmony export */ });\nconst contactAddress = \"123 Our House Drive, Mycity, Australia\"\n\nfunction displayContact(container = document.getElementById(\"content\")) {\n    container.innerHTML = \"\"\n    const newH1 = document.createElement('h1')\n    newH1.innerText = \"Find Us\"\n    const newAddress = document.createElement('p')\n    newAddress.innerText = contactAddress\n    container.appendChild(newH1)\n    container.appendChild(newAddress)\n}\n\n\n\n//# sourceURL=webpack://restaurantpage-odin/./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav */ \"./src/nav.js\");\n\n\nconst app = document.getElementById(\"content\")\n\nfunction displayHome() {\n    app.innerHTML = \"\"\n    let newH1 = document.createElement(\"h1\")\n    newH1.innerText = \"PIZZAAAAAAA!!!\"\n    app.appendChild(newH1)\n}\n    \n(0,_nav__WEBPACK_IMPORTED_MODULE_0__.loadNavigation)();\ndisplayHome();\n\n//# sourceURL=webpack://restaurantpage-odin/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   displayHome: () => (/* binding */ displayHome)\n/* harmony export */ });\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav */ \"./src/nav.js\");\n\n\nconst app = document.getElementById(\"content\")\nconst aboutText = \"Welcome to Happy Spouse Pizza. You bought them a pizza oven, now they make you pizza! Yay!\"\n\nfunction displayHome() {\n    app.innerHTML = \"\"\n    let newH1 = document.createElement('h1')\n    newH1.innerText = \"PIZZAAAAAAA!!!\"\n    let newText = document.createElement('p')\n    newText.innerText = aboutText\n    app.appendChild(newH1)\n    app.appendChild(newText)\n}\n    \n(0,_nav__WEBPACK_IMPORTED_MODULE_0__.loadNavigation)();\ndisplayHome();\n\n\n\n//# sourceURL=webpack://restaurantpage-odin/./src/index.js?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   displayMenu: () => (/* binding */ displayMenu)\n/* harmony export */ });\n\nconst menuList = [\n    {title: \"margarita\",\n    toppings: \"cheese, baby tomatoes, fresh basil\",\n    cost: \"$10\"},\n    {title: \"hawaiian\",\n    toppings: \"cheese, BBQ sauce, pineapple, vegan bacon\", \n    cost: \"$12\"},\n    {title: \"supreme\",\n    toppings: \"cheese, BBQ sauce, mushrooms, char-grilled veggies, sun-dried tomatoes, olives\",\n    cost: \"$18\"},\n]\n\nconst displayMenu = (container = document.getElementById(\"content\")) => {\n    container.innerHTML = \"\"\n    const menuDiv = document.createElement('div')\n    menuDiv.id = \"menuDiv\"\n    menuList.forEach(item => {\n        const newMenuCard = document.createElement('div')\n        newMenuCard.className = \"menuCard\"\n        newMenuCard.id = item.title\n        const newTitle = document.createElement('h2')\n        newTitle.innerText = item.title\n        newMenuCard.appendChild(newTitle)\n        const newDiv = document.createElement('div')\n        const newTops = document.createElement('p')\n        newTops.innerText = item.toppings\n        const newCost = document.createElement('p')\n        newCost.innerText = item.cost\n        newDiv.appendChild(newTops)\n        newDiv.appendChild(newCost)\n        newDiv.className = \"menuDetails\"\n        newMenuCard.appendChild(newDiv)\n        menuDiv.appendChild(newMenuCard)\n    })\n    container.appendChild(menuDiv)\n}\n\n\n\n//# sourceURL=webpack://restaurantpage-odin/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   displayMenu: () => (/* binding */ displayMenu)\n/* harmony export */ });\n\nconst menuList = [\n    {title: \"margarita\",\n    toppings: \"cheese, baby tomatoes, fresh basil\",\n    cost: \"$10\"},\n    {title: \"hawaiian\",\n    toppings: \"cheese, BBQ sauce, pineapple, vegan bacon\", \n    cost: \"$12\"},\n    {title: \"supreme\",\n    toppings: \"cheese, BBQ sauce, mushrooms, char-grilled veggies, sun-dried tomatoes, olives\",\n    cost: \"$18\"},\n]\n\nconst displayMenu = (container = document.getElementById(\"content\")) => {\n    container.innerHTML = \"\"\n    const newH1 = document.createElement('h1')\n    newH1.innerText = \"Our Menu\"\n    container.appendChild(newH1)\n    const menuDiv = document.createElement('div')\n    menuDiv.id = \"menuDiv\"\n    menuList.forEach(item => {\n        const newMenuCard = document.createElement('div')\n        newMenuCard.className = \"menuCard\"\n        newMenuCard.id = item.title\n        const newTitle = document.createElement('h2')\n        newTitle.innerText = item.title\n        newMenuCard.appendChild(newTitle)\n        const newDiv = document.createElement('div')\n        const newTops = document.createElement('p')\n        newTops.innerText = item.toppings\n        const newCost = document.createElement('p')\n        newCost.innerText = item.cost\n        newCost.className = \"cost\"\n        newDiv.appendChild(newTops)\n        newDiv.appendChild(newCost)\n        newDiv.className = \"menuDetails\"\n        newMenuCard.appendChild(newDiv)\n        menuDiv.appendChild(newMenuCard)\n    })\n    container.appendChild(menuDiv)\n}\n\n\n\n//# sourceURL=webpack://restaurantpage-odin/./src/menu.js?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadNavigation: () => (/* binding */ loadNavigation)\n/* harmony export */ });\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\nconst header = document.getElementById(\"header\")\nconst app = document.getElementById(\"content\")\n\nconst navOptions = ['Home', 'Menu', 'Contact']\n\nconst loadNavigation = () => {\n    header.innerHTML = ''\n    navOptions.forEach(item => {\n        const newTab = document.createElement('div')\n        newTab.innerText = String(item)\n        newTab.id = String(item)\n        newTab.className = \"navTab\"\n        header.appendChild(newTab)\n    })\n    const menuBtn = document.getElementById(\"Menu\")\n    menuBtn.addEventListener('click', () => {;(0,_menu__WEBPACK_IMPORTED_MODULE_0__.displayMenu)(app)})\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage-odin/./src/nav.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadNavigation: () => (/* binding */ loadNavigation)\n/* harmony export */ });\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ \"./src/index.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n\n\n\n\nconst header = document.getElementById(\"header\")\nconst app = document.getElementById(\"content\")\n\nconst navOptions = ['Home', 'Menu', 'Contact']\n\nconst loadNavigation = () => {\n    header.innerHTML = ''\n    navOptions.forEach(item => {\n        const newTab = document.createElement('div')\n        newTab.innerText = String(item)\n        newTab.id = String(item)\n        newTab.className = \"navTab\"\n        header.appendChild(newTab)\n    })\n    const menuBtn = document.getElementById(\"Menu\")\n    menuBtn.addEventListener('click', () => {;(0,_menu__WEBPACK_IMPORTED_MODULE_0__.displayMenu)(app)})\n    const homeBtn = document.getElementById(\"Home\")\n    homeBtn.addEventListener('click', () => {;(0,_index__WEBPACK_IMPORTED_MODULE_1__.displayHome)()})\n    const contactBtn = document.getElementById(\"Contact\")\n    contactBtn.addEventListener('click', () => {;(0,_contact__WEBPACK_IMPORTED_MODULE_2__.displayContact)()})\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage-odin/./src/nav.js?");
 
 /***/ })
 
@@ -99,7 +109,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()

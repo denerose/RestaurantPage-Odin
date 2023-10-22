@@ -20,8 +20,17 @@ body {
 }
 
 header {
+    color: rgba(var(--platinum), 0.9);
     background-color: rgba(var(--charcoal), 0.7);
-    height: 10vh;
+    min-height: 10vh;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    text-align: center;
+    padding: 2px;
+}
+
+#header {
     width: 100%;
     border: 0;
     margin: 0;
@@ -35,6 +44,10 @@ header {
 footer {
     background-color: rgba(var(--charcoal), 0.7);
     height: 10%;
+    text-align: center;
+    color: rgba(var(--platinum), 0.9);
+    font-size: small;
+    padding: 1px;
 }
 
 .navTab {
@@ -42,4 +55,49 @@ footer {
     border: 0.1px solid rgba(var(--orange), 0.5);
     background-color: rgba(var(--orange), 0.2);
     padding: 1em;
+    margin: 5px;
+}
+
+.navTab:hover {
+    background-color: rgba(var(--orange), 0.5);
+}
+
+#content {
+    border: 0.5px solid rgba(var(--platinum), 0.9);
+    background-color: rgba(var(--platinum), 0.2);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem auto;
+    padding: 1em;
+    width: 80%;
+    height: 65vh;
+    overflow: auto;
+}
+
+a {
+    color: rgba(var(--green), 1);
+}
+
+.menuCard {
+    display: grid;
+    columns: 100%;
+    width: 30%;
+    background-color: rgba(var(--platinum), 0.4);
+    border: 0.5px solid rgba(var(--green), 0.2);
+    color: rgba(var(--charcoal), 0.95);
+}
+
+#menuDiv {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 5px auto;
+}
+
+.menuCard > h2 {
+    padding: 1px;
 }

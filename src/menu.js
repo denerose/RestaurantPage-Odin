@@ -13,6 +13,9 @@ const menuList = [
 
 const displayMenu = (container = document.getElementById("content")) => {
     container.innerHTML = ""
+    const newH1 = document.createElement('h1')
+    newH1.innerText = "Our Menu"
+    container.appendChild(newH1)
     const menuDiv = document.createElement('div')
     menuDiv.id = "menuDiv"
     menuList.forEach(item => {
@@ -27,6 +30,7 @@ const displayMenu = (container = document.getElementById("content")) => {
         newTops.innerText = item.toppings
         const newCost = document.createElement('p')
         newCost.innerText = item.cost
+        newCost.className = "cost"
         newDiv.appendChild(newTops)
         newDiv.appendChild(newCost)
         newDiv.className = "menuDetails"
